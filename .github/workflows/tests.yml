@@ -1,0 +1,30 @@
+name: Deterministic comparison and tests
+on:
+  push:
+    branches: [main]
+  pull_request:
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python -m pip install -r requirements.txt
+      - run: python run_analysis.py
+      - run: python -m pytest
+      - name: Verify evidence artifacts
+        run: |
+          python - <<'PY'
+          import csv, json
+          from pathlib import Path
+          data=json.loads(Path('outputs/metrics.json').read_text())
+          assert data['comparable_points']==1747
+          assert data['missing_timestamp_slots']==177
+          assert data['excluded_measurement_rows']==53
+          with open('outputs/comparison_table.csv', newline='') as f:
+              assert len(list(csv.DictReader(f)))==1800
+          for name in ('predicted_vs_measured','residual_difference'):
+              assert Path('outputs/plots',name+'.png').exists()
+          PY
