@@ -1,0 +1,96 @@
+{
+  "source_measured_rows": 1800,
+  "source_prediction_rows": 1800,
+  "comparable_points": 1747,
+  "excluded_measurement_rows": 53,
+  "status_counts": {
+    "OK": 1747,
+    "MISSING": 33,
+    "REJECTED": 14,
+    "SUSPICIOUS": 6
+  },
+  "predicted_unit": "degC",
+  "measured_unit": "degC",
+  "alignment": "exact sample_number AND timezone-aware timestamp",
+  "timestamp_start_utc": "2026-10-08T18:00:00+00:00",
+  "timestamp_end_utc": "2026-10-08T19:05:52+00:00",
+  "expected_interval_seconds": 2,
+  "expected_grid_slots_across_span": 1977,
+  "received_timestamp_slots": 1800,
+  "missing_timestamp_slots": 177,
+  "time_gaps": [
+    {
+      "after_sample": 359,
+      "before_sample": 360,
+      "last_observed_timestamp": "2026-10-08T18:11:56+00:00",
+      "next_observed_timestamp": "2026-10-08T18:12:32+00:00",
+      "gap_seconds": 36,
+      "missing_timestamp_slots": 17
+    },
+    {
+      "after_sample": 814,
+      "before_sample": 815,
+      "last_observed_timestamp": "2026-10-08T18:27:40+00:00",
+      "next_observed_timestamp": "2026-10-08T18:29:14+00:00",
+      "gap_seconds": 94,
+      "missing_timestamp_slots": 46
+    },
+    {
+      "after_sample": 1209,
+      "before_sample": 1210,
+      "last_observed_timestamp": "2026-10-08T18:42:22+00:00",
+      "next_observed_timestamp": "2026-10-08T18:45:24+00:00",
+      "gap_seconds": 182,
+      "missing_timestamp_slots": 90
+    },
+    {
+      "after_sample": 1544,
+      "before_sample": 1545,
+      "last_observed_timestamp": "2026-10-08T18:56:32+00:00",
+      "next_observed_timestamp": "2026-10-08T18:57:22+00:00",
+      "gap_seconds": 50,
+      "missing_timestamp_slots": 24
+    }
+  ],
+  "largest_timestamp_gap_seconds": 182,
+  "mean_signed_difference_c": 1.7348654836863195,
+  "mean_absolute_difference_c": 1.7348654836863195,
+  "median_signed_difference_c": 1.745000000000001,
+  "min_signed_difference_c": 0.5390000000000015,
+  "max_signed_difference_c": 2.6030000000000015,
+  "maximum_absolute_difference_c": 2.6030000000000015,
+  "positive_residual_fraction": 1.0,
+  "residual_standard_deviation_c": 0.24060013191133936,
+  "region_summary": [
+    {
+      "sample_region": "1-450",
+      "count": 440,
+      "mean_signed_difference_c": 1.7500431818181819,
+      "mean_absolute_difference_c": 1.7500431818181819
+    },
+    {
+      "sample_region": "451-800",
+      "count": 340,
+      "mean_signed_difference_c": 1.7229205882352943,
+      "mean_absolute_difference_c": 1.7229205882352943
+    },
+    {
+      "sample_region": "801-1180",
+      "count": 370,
+      "mean_signed_difference_c": 1.707583783783784,
+      "mean_absolute_difference_c": 1.707583783783784
+    },
+    {
+      "sample_region": "1181-1500",
+      "count": 305,
+      "mean_signed_difference_c": 1.7709868852459014,
+      "mean_absolute_difference_c": 1.7709868852459014
+    },
+    {
+      "sample_region": "1501-1800",
+      "count": 292,
+      "mean_signed_difference_c": 1.7227431506849313,
+      "mean_absolute_difference_c": 1.7227431506849313
+    }
+  ]
+}
